@@ -1,4 +1,11 @@
 Urlshortener::Application.routes.draw do
+ 
+
+  get '/:id(/:desc)' => 'shorts#show', :as => 'short'
+  get '/' => 'shorts#new', :as => 'new_short'
+  post '/' => 'shorts#create', :as => 'shorts'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
